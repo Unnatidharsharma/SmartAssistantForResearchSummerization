@@ -59,5 +59,16 @@ Use this assistant to:
 ---
 
 ## 📂 Project Structure
-
+document-analyzer/
+├── backend/
+│   ├── app.py
+│   ├── gemini_ai.py
+│   ├── doc_processor.py
+│   ├── requirements.txt
+│   └── .env
+├── frontend/
+│   ├── index.html
+│   ├── script.js
+│   └── styles.css
+└── uploads/ (auto-created)
 
