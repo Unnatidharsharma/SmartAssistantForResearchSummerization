@@ -1,218 +1,60 @@
-# Gemini AI Document Analysis Assistant
+# 🌟 Gemini AI Document Analysis Assistant
 
-A modern web application that uses Google's Gemini AI to analyze documents and provide intelligent Q&A capabilities with logic-based challenges.
+A modern GenAI-powered web application that uses **Google's Gemini 2.0 Flash** to analyze uploaded documents and provide intelligent Q&A capabilities with logic-based challenge questions.
 
-## Features
+This project showcases skills in **AI integration**, **full-stack web development**, and **document intelligence** — built to **impress recruiters** for internships and software development roles.
 
-- **Document Upload**: Support for PDF and TXT files
-- **Gemini AI Analysis**: Uses Google's Gemini 2.0 Flash for advanced document processing
-- **Two Interaction Modes**:
-  - **Ask Anything**: Free-form Q&A with document-grounded responses
-  - **Challenge Me**: Logic-based questions with AI evaluation
-- **Modern UI**: Clean, responsive interface built with HTML, CSS, and JavaScript
-- **REST API**: Flask backend with comprehensive endpoints
+---
 
-## Architecture
+## 🖼️ Demo & Screenshots
 
-### Backend (Flask)
-- **Flask API**: RESTful endpoints for document processing and AI interactions
-- **Document Processing**: PDF and TXT text extraction with chunking
-- **Gemini AI Integration**: Advanced language model for analysis, summarization, and evaluation
-- **Session Management**: In-memory storage for document sessions
+### 🔹 Live Demo (Optional)
+> 📹 [Watch Demo on YouTube](https://www.youtube.com/watch?v=YOUR_VIDEO_LINK)
 
-### Frontend (HTML/CSS/JavaScript)
-- **Responsive Design**: Modern UI with gradient backgrounds and animations
-- **Interactive Elements**: Drag-and-drop file upload, real-time Q&A
-- **Dynamic Content**: Live conversation history and challenge evaluations
-- **API Integration**: Fetch-based communication with Flask backend
+### 🔸 Screenshots
+| Upload Screen | Q&A Interaction | Logic Challenge |
+|---------------|------------------|------------------|
+| ![Upload](screenshots/upload.png) | ![Q&A](screenshots/qa.png) | ![Challenge](screenshots/challenge.png) |
 
-## Setup Instructions
+---
 
-### Prerequisites
-- Python 3.11+
-- Google Gemini API key (free at https://makersuite.google.com/app/apikey)
+## 🚀 Features
 
-### Installation
+- 📄 **Multi-format Upload**: PDF and TXT support with encoding-safe processing
+- 🤖 **Gemini 2.0 AI Analysis**: Document summarization, Q&A, and challenge generation
+- 💬 **Ask Anything Mode**: Natural Q&A from uploaded content
+- 🧩 **Challenge Me Mode**: Logic-based challenge questions with AI evaluation
+- 🌐 **Modern UI**: Gradient backgrounds, loading indicators, mobile-ready layout
+- 🔧 **Flask REST API**: Clean endpoints for file upload, Q&A, and evaluation
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd document-analysis-assistant
-   ```
+---
 
-2. **Install dependencies**
-   ```bash
-   pip install flask flask-cors pypdf2 werkzeug google-genai
-   ```
+## 🧠 Use Case
 
-3. **Set up Gemini API key**
-   ```bash
-   export GEMINI_API_KEY="your-api-key-here"
-   ```
+Use this assistant to:
+- Auto-summarize long research papers
+- Ask document-aware questions
+- Test understanding with logic-based quizzes
+- Impress recruiters with a smart, real-world GenAI application
 
-4. **Run the backend**
-   ```bash
-   cd backend
-   python app.py
-   ```
+---
 
-5. **Open the frontend**
-   - Open `frontend/index.html` in your web browser
-   - Or serve it through a local HTTP server:
-     ```bash
-     cd frontend
-     python -m http.server 8000
-     ```
+## 🧱 Architecture
 
-## API Endpoints
+### 📦 Backend (Flask, Python)
+- RESTful API
+- Text extraction from PDF/TXT
+- Gemini API integration
+- Session-based context management
 
-### POST /api/upload
-Upload and process a document (PDF/TXT)
-
-**Request**: Multipart form data with file
-**Response**: 
-```json
-{
-  "session_id": "uuid",
-  "filename": "document.pdf",
-  "summary": "Document summary...",
-  "message": "Document processed successfully"
-}
-```
-
-### POST /api/ask
-Ask questions about the document
-
-**Request**:
-```json
-{
-  "session_id": "uuid",
-  "question": "What are the main findings?"
-}
-```
-
-**Response**:
-```json
-{
-  "question": "What are the main findings?",
-  "answer": "The main findings are...",
-  "justification": "This is supported by..."
-}
-```
-
-### POST /api/generate-questions
-Generate challenge questions
-
-**Request**:
-```json
-{
-  "session_id": "uuid"
-}
-```
-
-**Response**:
-```json
-{
-  "questions": [
-    "Question 1...",
-    "Question 2...",
-    "Question 3..."
-  ]
-}
-```
-
-### POST /api/evaluate-answer
-Evaluate user's answer to challenge question
-
-**Request**:
-```json
-{
-  "session_id": "uuid",
-  "question_index": 0,
-  "answer": "User's answer..."
-}
-```
-
-**Response**:
-```json
-{
-  "evaluation": {
-    "score": 8,
-    "feedback": "Good answer but...",
-    "justification": "Based on paragraph 2..."
-  }
-}
-```
-
-## Project Structure
-
-```
-├── backend/
-│   ├── app.py              # Flask application
-│   ├── ai_assistant.py     # OpenAI integration
-│   └── document_processor.py # Document processing
-├── frontend/
-│   ├── index.html          # Main HTML file
-│   ├── styles.css          # Styling
-│   └── script.js           # JavaScript logic
-├── README.md               # This file
-└── replit.md              # Project documentation
-```
-
-## Data Flow
-
-1. **Document Upload**: User uploads PDF/TXT through frontend
-2. **Text Extraction**: Backend processes file and extracts text
-3. **AI Processing**: OpenAI generates document summary
-4. **Interactive Phase**: User can ask questions or take challenges
-5. **Response Generation**: AI provides grounded responses with justifications
-6. **Session Management**: Conversation history maintained in memory
-
-## Key Features
-
-### Document Processing
-- Multi-format support (PDF, TXT)
-- Robust text extraction with error handling
-- Text chunking for efficient processing
-- Encoding detection for TXT files
-
-### Gemini AI Integration
-- Google's Gemini 2.0 Flash model for advanced language understanding
-- Intelligent document summarization and analysis
-- Context-aware question answering with citations
-- Advanced answer evaluation with constructive feedback
-
-### User Experience
+### 🎨 Frontend (HTML, CSS, JavaScript)
+- Responsive, animated UI
 - Drag-and-drop file upload
-- Real-time loading indicators
-- Responsive design for mobile devices
-- Smooth animations and transitions
-- Error handling with user-friendly messages
+- Dynamic Q&A display
+- REST API integration using `fetch`
 
-## Security & Best Practices
+---
 
-- File type validation
-- File size limits (16MB)
-- Secure filename handling
-- API key protection
-- CORS configuration
-- Error handling throughout
+## 📂 Project Structure
 
-## Deployment
 
-### Local Development
-- Backend runs on port 5000
-- Frontend can be served statically or through local server
-- Environment variables for API keys
-
-### Production Considerations
-- Use Redis or database for session storage
-- Implement authentication and authorization
-- Add rate limiting
-- Use HTTPS
-- Configure proper CORS origins
-- Add logging and monitoring
-
-## License
-
-This project is licensed under the MIT License.
