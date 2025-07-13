@@ -13,8 +13,8 @@ A modern GenAI-powered web application that uses **Google's Gemini 2.0 Flash** t
 Upload Screen 
 ![Alt Text](Upload_Document.png)
 
-Interactive Q&A
-![Alt Text](Q&A.png)
+Ask Anything
+![Alt Text](Ask_Anything.png)
 
 Challenge Mode
 ![Alt Text](ChallengeMode.png)
