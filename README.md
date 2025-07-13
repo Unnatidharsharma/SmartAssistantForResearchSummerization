@@ -84,7 +84,7 @@ bash
 git clone https://github.com/yourusername/ai-document-assistant.git
 cd ai-document-assistant
 ```
-##Set up virtual environment
+## Set up virtual environment
 ```
 python3 -m venv venv
 source venv/bin/activate
