@@ -12,9 +12,8 @@ This project showcases skills in **AI integration**, **full-stack web developmen
 > 📹 [Watch Demo on YouTube](https://www.youtube.com/watch?v=YOUR_VIDEO_LINK)
 
 ### 🔸 Screenshots
-| Upload Screen | Q&A Interaction | Logic Challenge |
-|---------------|------------------|------------------|
-| ![Upload](screenshots/upload.png) | ![Q&A](screenshots/qa.png) | ![Challenge](Screenshot 2025-07-13 191205.png) |
+Upload Screen 
+![App Screenshot](.png)
 
 ---
 
