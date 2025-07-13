@@ -14,7 +14,7 @@ This project showcases skills in **AI integration**, **full-stack web developmen
 ### 🔸 Screenshots
 | Upload Screen | Q&A Interaction | Logic Challenge |
 |---------------|------------------|------------------|
-| ![Upload](screenshots/upload.png) | ![Q&A](screenshots/qa.png) | ![Challenge](screenshots/challenge.png) |
+| ![Upload](screenshots/upload.png) | ![Q&A](screenshots/qa.png) | ![Challenge](Screenshot 2025-07-13 191205.png) |
 
 ---
 
