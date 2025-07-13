@@ -74,3 +74,73 @@ Use this assistant to:
 
 ---
 
+# AI Document Assistant
+
+## 🚀 Quick Setup
+
+### 1. Clone the repository
+```
+bash
+git clone https://github.com/yourusername/ai-document-assistant.git
+cd ai-document-assistant
+```
+##Set up virtual environment
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+# For Windows
+```
+python -m venv venv
+.\venv\Scripts\activate
+```
+
+## Install dependencies
+```
+pip install flask PyPDF2 python-docx google-generativeai werkzeug python-dotenv
+```
+
+## Configure environment
+```
+echo "GEMINI_API_KEY=your_api_key_here" > .env
+echo "FLASK_ENV=development" >> .env
+echo "UPLOAD_FOLDER=uploads" >> .env
+```
+
+## Create uploads directory
+```mkdir uploads ```
+
+
+## Run the application
+```
+python app.py
+
+# Option 2: Run with Flask
+flask run --host=0.0.0.0 --port=5000
+```
+
+## Testing the API
+```
+curl -X POST -F "file=@sample.txt" http://localhost:5000/api/upload
+curl -X POST -F "file=@document.pdf" http://localhost:5000/api/upload
+```
+
+## With Python requests
+```
+import requests
+
+url = "http://localhost:5000/api/upload"
+files = {"file": open("test.docx", "rb")}
+response = requests.post(url, files=files)
+print(response.json())
+```
+
+## License
+```
+MIT License - See LICENSE file for details
+```
+
+
+
+
+
