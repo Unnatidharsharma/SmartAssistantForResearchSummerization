@@ -59,18 +59,18 @@ Use this assistant to:
 ---
 
 ## 📂 Project Structure
-document-analyzer/
+```
 ├── backend/
-│   ├── app.py
-│   ├── gemini_ai.py
-│   ├── doc_processor.py
-│   ├── requirements.txt
-│   └── .env
+│   ├── app.py              # Flask application
+│   ├── ai_assistant.py     # OpenAI integration
+│   └── document_processor.py # Document processing
 ├── frontend/
-│   ├── index.html
-│   ├── script.js
-│   └── styles.css
-└── uploads/ (auto-created)
+│   ├── index.html          # Main HTML file
+│   ├── styles.css          # Styling
+│   └── script.js           # JavaScript logic
+├── README.md               # This file
+└── replit.md              # Project documentation
+```
 
 ---
 
