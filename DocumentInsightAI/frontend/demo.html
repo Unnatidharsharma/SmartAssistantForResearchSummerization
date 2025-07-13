@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini AI Document Analysis Assistant - Demo</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .demo-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .demo-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .demo-section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .demo-section p {
+            line-height: 1.6;
+            color: #555;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        .feature-list li::before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .access-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        .access-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        .architecture-diagram {
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background: #e8f4f8;
+            border-radius: 8px;
+        }
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1>🚀 Gemini AI Document Analysis Assistant</h1>
+        
+        <div class="demo-section">
+            <h2>🎯 What This Application Does</h2>
+            <p>This is a modern web application that uses local AI models to analyze documents and provide intelligent Q&A capabilities. Upload a PDF or TXT document, and the AI will help you understand, question, and test your knowledge about the content. No external API keys required!</p>
+        </div>
+
+        <div class="demo-section">
+            <h2>✨ Key Features</h2>
+            <ul class="feature-list">
+                <li>Upload PDF or TXT documents with drag-and-drop support</li>
+                <li>AI-powered document summarization (≤150 words)</li>
+                <li>Ask Anything mode: Free-form Q&A with document-grounded responses</li>
+                <li>Challenge Me mode: AI-generated logic questions with evaluation</li>
+                <li>Modern responsive web interface</li>
+                <li>Real-time conversation history</li>
+                <li>Comprehensive error handling and user feedback</li>
+            </ul>
+        </div>
+
+        <div class="demo-section">
+            <h2>🏗️ Architecture</h2>
+            <div class="architecture-diagram">
+                <strong>Frontend (HTML/CSS/JS)</strong> ⟷ <strong>Flask REST API</strong> ⟷ <strong>OpenAI GPT-4o</strong>
+            </div>
+            <p>The application uses a modern web architecture with:</p>
+            <ul class="feature-list">
+                <li>Flask backend with RESTful API endpoints</li>
+                <li>Responsive HTML/CSS/JavaScript frontend</li>
+                <li>OpenAI GPT-4o for AI-powered document analysis</li>
+                <li>Session-based state management</li>
+                <li>CORS-enabled for frontend-backend communication</li>
+            </ul>
+        </div>
+
+        <div class="demo-section">
+            <h2>🔧 Technical Implementation</h2>
+            <p>The application includes:</p>
+            <ul class="feature-list">
+                <li>6 REST API endpoints for complete functionality</li>
+                <li>Robust document processing (PDF via PyPDF2, TXT with encoding detection)</li>
+                <li>AI conversation management with context preservation</li>
+                <li>Modern CSS with gradients, animations, and responsive design</li>
+                <li>JavaScript class-based architecture for maintainability</li>
+                <li>Comprehensive error handling throughout the stack</li>
+            </ul>
+        </div>
+
+        <div class="demo-section">
+            <h2>📋 How to Use</h2>
+            <ol>
+                <li><strong>Upload Document:</strong> Drag and drop or click to upload a PDF or TXT file</li>
+                <li><strong>Review Summary:</strong> The AI will automatically generate a concise summary</li>
+                <li><strong>Choose Mode:</strong>
+                    <ul>
+                        <li><strong>Ask Anything:</strong> Ask free-form questions about the document</li>
+                        <li><strong>Challenge Me:</strong> Take AI-generated logic questions to test understanding</li>
+                    </ul>
+                </li>
+                <li><strong>Interact:</strong> Get AI-powered responses with document references</li>
+            </ol>
+        </div>
+
+        <div class="demo-section">
+            <h2>🚀 Access the Application</h2>
+            <p>The application is running with:</p>
+            <div class="code-block">
+                Backend API: http://localhost:5000/api/<br>
+                Frontend: http://localhost:8000/
+            </div>
+            <p>Click the link below to start using the application:</p>
+            <a href="http://localhost:8000/" class="access-link" target="_blank">
+                🚀 Open Document Analysis Assistant
+            </a>
+        </div>
+
+        <div class="demo-section">
+            <h2>🔑 Requirements</h2>
+            <ul class="feature-list">
+                <li>OpenAI API key configured in environment variables</li>
+                <li>Python 3.11+ with Flask and dependencies</li>
+                <li>Modern web browser with JavaScript enabled</li>
+                <li>Internet connection for AI API calls</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

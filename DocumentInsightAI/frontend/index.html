@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini AI Document Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-brain"></i>
+                    <span>Gemini AI</span>
+                </div>
+                <button id="newChatBtn" class="new-chat-btn">
+                    <i class="fas fa-plus"></i>
+                    New Analysis
+                </button>
+            </div>
+            
+            <div class="sidebar-content">
+                <div class="upload-section">
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <h3>Upload Document</h3>
+                        <p>PDF or TXT files</p>
+                        <input type="file" id="fileInput" accept=".pdf,.txt" style="display: none;">
+                        <button id="uploadBtn" class="btn btn-primary">
+                            <i class="fas fa-upload"></i> Choose File
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="document-info" id="documentInfo" style="display: none;">
+                    <div class="doc-header">
+                        <i class="fas fa-file-alt"></i>
+                        <span id="documentTitle"></span>
+                    </div>
+                    <div class="doc-summary">
+                        <h4>Summary</h4>
+                        <p id="documentSummary"></p>
+                    </div>
+                </div>
+                
+                <div class="mode-selection" id="modeSelection" style="display: none;">
+                    <h4>Interaction Mode</h4>
+                    <div class="mode-buttons">
+                        <button id="askModeBtn" class="mode-btn active" data-mode="ask">
+                            <i class="fas fa-question-circle"></i>
+                            Ask Anything
+                        </button>
+                        <button id="challengeModeBtn" class="mode-btn" data-mode="challenge">
+                            <i class="fas fa-brain"></i>
+                            Challenge Me
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="main-content">
+            <!-- Welcome Screen -->
+            <div class="welcome-screen" id="welcomeScreen">
+                <div class="welcome-content">
+                    <div class="welcome-header">
+                        <i class="fas fa-robot"></i>
+                        <h1>Gemini AI Document Assistant</h1>
+                        <p>Upload a document and start an intelligent conversation</p>
+                    </div>
+                    <div class="feature-cards">
+                        <div class="feature-card">
+                            <i class="fas fa-file-search"></i>
+                            <h3>Document Analysis</h3>
+                            <p>Intelligent summarization and deep understanding</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-comments"></i>
+                            <h3>Smart Q&A</h3>
+                            <p>Ask anything about your document with context</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Challenge Mode</h3>
+                            <p>Test your understanding with AI-generated questions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Interface -->
+            <div class="chat-interface" id="chatInterface" style="display: none;">
+                <div class="chat-header">
+                    <div class="chat-title">
+                        <i class="fas fa-comment-dots"></i>
+                        <span id="chatModeTitle">Ask Anything</span>
+                    </div>
+                    <div class="chat-actions">
+                        <button id="clearChatBtn" class="btn btn-secondary">
+                            <i class="fas fa-trash"></i>
+                            Clear Chat
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="chat-messages" id="chatMessages">
+                    <div class="welcome-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <p>Hello! I've analyzed your document. Feel free to ask me anything about it or switch to Challenge Mode to test your understanding.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="typing-animation">
+                        <div class="typing-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-container">
+                    <div class="chat-input">
+                        <textarea id="messageInput" placeholder="Ask a question about your document..." rows="1"></textarea>
+                        <button id="sendBtn" class="send-btn" disabled>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Challenge Mode -->
+            <div class="challenge-interface" id="challengeInterface" style="display: none;">
+                <div class="challenge-header">
+                    <h2><i class="fas fa-brain"></i> Challenge Mode</h2>
+                    <p>Test your understanding with AI-generated questions</p>
+                    <button id="generateQuestionsBtn" class="btn btn-primary">
+                        <i class="fas fa-lightbulb"></i> Generate Questions
+                    </button>
+                </div>
+                
+                <div class="challenge-content" id="challengeContent">
+                    <div class="challenge-placeholder">
+                        <i class="fas fa-question-circle"></i>
+                        <h3>Ready for a Challenge?</h3>
+                        <p>Click "Generate Questions" to create personalized questions based on your document.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p id="loadingText">Processing your document...</p>
+        </div>
+    </div>
+
+    <!-- Error Toast -->
+    <div class="error-toast" id="errorToast" style="display: none;">
+        <i class="fas fa-exclamation-triangle"></i>
+        <span id="errorMessage"></span>
+        <button class="close-toast" onclick="hideError()">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
