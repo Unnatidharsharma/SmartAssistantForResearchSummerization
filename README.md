@@ -2,8 +2,6 @@
 
 A modern GenAI-powered web application that uses **Google's Gemini 2.0 Flash** to analyze uploaded documents and provide intelligent Q&A capabilities with logic-based challenge questions.
 
-This project showcases skills in **AI integration**, **full-stack web development**, and **document intelligence** — built to **impress recruiters** for internships and software development roles.
-
 ---
 
 ## 🖼️ Demo & Screenshots
