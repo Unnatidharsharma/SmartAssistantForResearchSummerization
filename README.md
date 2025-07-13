@@ -11,8 +11,8 @@ A modern GenAI-powered web application that uses **Google's Gemini 2.0 Flash** t
 
 ### 🔸 Screenshots
 Upload Screen 
-![App Screenshot](SmartAssistantForResearchSummerization
-/Screenshot 2025-07-13 191205.png)
+![Alt Text]()
+
 
 
 ## 🚀 Features
