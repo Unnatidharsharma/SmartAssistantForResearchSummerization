@@ -1,4 +1,4 @@
-# 🌟 Gemini AI Document Analysis Assistant
+# 🌟 Smart Assistance for Research Summerization
 
 A modern GenAI-powered web application that uses **Google's Gemini 2.0 Flash** to analyze uploaded documents and provide intelligent Q&A capabilities with logic-based challenge questions.
 
