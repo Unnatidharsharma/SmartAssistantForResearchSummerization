@@ -72,3 +72,5 @@ document-analyzer/
 │   └── styles.css
 └── uploads/ (auto-created)
 
+---
+
