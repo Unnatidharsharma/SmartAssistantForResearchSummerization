@@ -7,7 +7,7 @@ A modern GenAI-powered web application that uses **Google's Gemini 2.0 Flash** t
 ## 🖼️ Demo & Screenshots
 
 ### 🔹 Live Demo (Optional)
-> 📹 [Watch Demo on YouTube]([https://www.youtube.com/watch?v=YOUR_VIDEO_LINK](https://youtu.be/73J2WSRIiDY))
+> 📹 [Watch Demo on YouTube](https://www.youtube.com/watch?v=73J2WSRIiDY)
 
 ### 🔸 Screenshots
 Upload Screen 
