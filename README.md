@@ -13,9 +13,9 @@ This project showcases skills in **AI integration**, **full-stack web developmen
 
 ### 🔸 Screenshots
 Upload Screen 
-![App Screenshot](.png)
+![App Screenshot](SmartAssistantForResearchSummerization
+/Screenshot 2025-07-13 191205.png)
 
----
 
 ## 🚀 Features
 
