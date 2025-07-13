@@ -11,7 +11,7 @@ A modern GenAI-powered web application that uses **Google's Gemini 2.0 Flash** t
 
 ### 🔸 Screenshots
 Upload Screen 
-![Alt Text]()
+![Alt Text](Upload_Document.png)
 
 
 
