@@ -17,7 +17,7 @@ Ask Anything
 ![Alt Text](Ask_Anything.png)
 
 Challenge Mode
-![Alt Text](ChallengeMode.png)
+![Alt Text](QuestionAnswer.png)
 
 
 
