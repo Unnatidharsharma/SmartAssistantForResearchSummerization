@@ -15,7 +15,7 @@ class GeminiAIAssistant:
     
     def __init__(self):
         # Initialize Gemini client
-        api_key = "AIzaSyB4FJ9m7itr9QojUtyg1DHarQTrpD-B2IM"  # Replace with your real key
+        api_key ="Place Api Key here"  # Replace with your real key
         self.client = genai.Client(api_key=api_key)
         logger.info("✅ Gemini AI Assistant initialized with hardcoded API key!")
 
